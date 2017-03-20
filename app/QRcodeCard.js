@@ -39,7 +39,7 @@ export default class QRcodeCard extends Component {
         return (
             <KeyboardAvoidingView behavior='height' style={styles.container}>
                 <View
-                    style={{backgroundColor:'white', padding: 10}}
+                    style={{ backgroundColor: 'white', padding: 10 }}
                     collapsable={false}
                     ref='qrcode'>
                     <QRCode
@@ -54,7 +54,6 @@ export default class QRcodeCard extends Component {
                             title='Back'
                             style={styles.button}
                             onPress={() => {
-                                Keyboard.dismiss();
                                 Actions.card({
                                     fullName,
                                     address,
@@ -62,8 +61,8 @@ export default class QRcodeCard extends Component {
                                     www,
                                     email,
                                     company
-                                    });
-                                }
+                                });
+                            }
                             }
                         />
                     </View>
@@ -77,19 +76,17 @@ export default class QRcodeCard extends Component {
                         placeholder={'Save as...'}
                     />
                     <View>
-                    <Button
-                        title='Save'
-                        style={styles.button}
-                        onPress={() => {
-                            Keyboard.dismiss();
-                            this.state.filename === '' ? Alert.alert('Enter filename', 'Filename cannot be empty') : this.snapshot('qrcode');
-                            }
-                        }
-                    />
+                        <Button
+                            title='Save'
+                            style={styles.button}
+                            onPress={() => {
+                                this.state.filename === '' ? Alert.alert('Enter filename', 'Filename cannot be empty') : this.snapshot('qrcode');
+                            }}
+                        />
                     </View>
                 </View>
             </KeyboardAvoidingView>
-                )
+        )
     }
 }
 
@@ -99,6 +96,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#039BE5',
     },
     buttonContainer: {
         marginTop: 20,
@@ -110,7 +108,9 @@ const styles = StyleSheet.create({
         flex: 2,
         height: 40,
         fontSize: 20,
-        borderColor: 'black'
+        borderWidth: 1,
+        borderColor: '#E1F5FE',
+        backgroundColor: '#4FC3F7',
     },
     button: {
         flex: 1,

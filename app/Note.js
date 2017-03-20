@@ -21,20 +21,22 @@ export default class NoteCreator extends Component {
     render() {
         return (
             <KeyboardAvoidingView behavior='height' style={styles.container}>
-                <TextInput
-                    multiline={true}
-                    style={styles.inputField}
-                    placeholder={'Your note comes here'}
-                    onChangeText={(noteText) => this.setState({ noteText })}
-                    value={this.state.noteText}
-                />
+                <View style={styles.inputContainer}>
+                    <TextInput
+                        multiline={true}
+                        style={styles.inputField}
+                        placeholder={'Your note comes here'}
+                        onChangeText={(noteText) => this.setState({ noteText })}
+                        value={this.state.noteText}
+                    />
+                </View>
                 <View style={styles.buttons}>
                     <Button
                         title='Back'
                         onPress={() => {
-                            Keyboard.dismiss();
+                            Keyboard.dismiss()
                             Actions.welcome();
-                            }
+                        }
                         }
                     />
                     <Button
@@ -44,7 +46,6 @@ export default class NoteCreator extends Component {
                     <Button
                         title='Show'
                         onPress={() => {
-                            Keyboard.dismiss();
                             Actions.qrcode(this.state.noteText);
                         }
                         }
@@ -59,15 +60,19 @@ export default class NoteCreator extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: '#039BE5',
         justifyContent: 'center',
     },
+    inputContainer: {
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
     inputField: {
-        backgroundColor: 'white',
-        borderColor: 'black',
+        backgroundColor: '#4FC3F7',
+        borderColor: '#E1F5FE',
         textAlignVertical: 'top',
-        height: 200,
-        borderWidth: 2,
+        height: 150,
+        borderWidth: 1,
         fontSize: 20,
         lineHeight: 20,
         paddingLeft: 5,

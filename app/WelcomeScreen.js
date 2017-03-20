@@ -29,8 +29,8 @@ const Welcome = () => {
         <View style={styles.noteButton}>
           <Button
             style={styles.button}
-            title='Note'
             onPress={() => Actions.note()}
+            title='Note'
           />
         </View>
       </View>
@@ -50,13 +50,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#039BE5',
   },
   header: {
     flex: 2,
     justifyContent: 'flex-end'
   },
   textHeader: {
+    color: '#B3E5FC',
     fontSize: 20,
     fontWeight: 'bold',
   },
@@ -65,7 +66,8 @@ const styles = StyleSheet.create({
   },
   noteButton: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+
 
   },
   cardButton: {
@@ -73,12 +75,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   button: {
+    color: 'green'
   },
   footer: {
     flex: 2,
     justifyContent: 'flex-start',
   },
   textFooter: {
+    color:'#B3E5FC',
     fontSize: 20,
     fontWeight: 'bold',
   },

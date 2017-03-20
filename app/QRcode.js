@@ -53,7 +53,6 @@ export default class QRcode extends Component {
                             title='Back'
                             style={styles.button}
                             onPress={() => {
-                                Keyboard.dismiss();
                                 Actions.note(this.props.data);
                                 }
                             }
@@ -73,7 +72,6 @@ export default class QRcode extends Component {
                             title='Save'
                             style={styles.button}
                             onPress={() => {
-                                Keyboard.dismiss();
                                 this.state.filename === '' ? Alert.alert('Enter filename', 'Filename cannot be empty') : this.snapshot('qrcode');
                                 }
                             }
@@ -92,6 +90,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#039BE5',
     },
     buttonContainer: {
         marginTop: 20,
@@ -103,7 +102,9 @@ const styles = StyleSheet.create({
         flex: 2,
         height: 40,
         fontSize: 20,
-        borderColor: 'black'
+        borderWidth: 1,
+        borderColor: '#E1F5FE',
+        backgroundColor: '#4FC3F7',
     },
     button: {
         flex: 1,

@@ -79,7 +79,7 @@ export default class CardCreator extends Component {
             title='Back'
             onPress={() => {
               Keyboard.dismiss();
-              Actions.welcome()
+              Actions.welcome();
               }
             }
           />
@@ -90,7 +90,6 @@ export default class CardCreator extends Component {
           <Button
             title='Show'
             onPress={() => {
-              Keyboard.dismiss();
               Actions.qrcodecard({
                 fullName: this.state.fullName,
                 address: this.state.address,
@@ -113,16 +112,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
+    backgroundColor: '#039BE5',
   },
   inputField: {
+    padding: 2,
+    height: 30,
+    fontSize: 20,
     marginLeft: 10,
+    borderWidth: 1,
     marginRight: 10,
     marginBottom: 20,
-    fontSize: 20,
-    height: 30,
-    borderWidth: 1,
-    borderColor: 'black',
-    padding: 2,
+    borderColor: '#E1F5FE',
+    backgroundColor: '#4FC3F7'
   },
   buttons: {
     flexDirection: 'row',
