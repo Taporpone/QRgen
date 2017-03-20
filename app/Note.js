@@ -34,10 +34,9 @@ export default class NoteCreator extends Component {
                     <Button
                         title='Back'
                         onPress={() => {
-                            Keyboard.dismiss()
+                            Keyboard.dismiss();
                             Actions.welcome();
-                        }
-                        }
+                        }}
                     />
                     <Button
                         title='Clear'
@@ -45,10 +44,7 @@ export default class NoteCreator extends Component {
                     />
                     <Button
                         title='Show'
-                        onPress={() => {
-                            Actions.qrcode(this.state.noteText);
-                        }
-                        }
+                        onPress={() => {Actions.qrcode(this.state.noteText)}}
                     />
                 </View>
             </KeyboardAvoidingView>

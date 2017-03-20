@@ -5,8 +5,7 @@ import {
     TextInput,
     Button,
     Alert,
-    KeyboardAvoidingView,
-    Keyboard
+    KeyboardAvoidingView
 } from 'react-native';
 
 import QRCode from 'react-native-qrcode';
@@ -62,8 +61,7 @@ export default class QRcodeCard extends Component {
                                     email,
                                     company
                                 });
-                            }
-                            }
+                            }}
                         />
                     </View>
                     <TextInput
@@ -113,7 +111,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#4FC3F7',
     },
     button: {
-        flex: 1,
-        marginTop: 20,
+        flex: 1
     }
 });

@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View,
   TextInput,
-  ScrollView,
   Button,
   Keyboard,
   KeyboardAvoidingView
@@ -80,8 +79,7 @@ export default class CardCreator extends Component {
             onPress={() => {
               Keyboard.dismiss();
               Actions.welcome();
-              }
-            }
+            }}
           />
           <Button
             title='Clear'

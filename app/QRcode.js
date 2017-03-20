@@ -5,8 +5,7 @@ import {
     TextInput,
     Button,
     Alert,
-    KeyboardAvoidingView,
-    Keyboard
+    KeyboardAvoidingView
 } from 'react-native';
 
 import QRCode from 'react-native-qrcode';
@@ -37,7 +36,7 @@ export default class QRcode extends Component {
         return (
             <KeyboardAvoidingView behavior='height' style={styles.container}>
                 <View
-                    style={{backgroundColor:'white', padding: 10}}
+                    style={{ backgroundColor: 'white', padding: 10 }}
                     collapsable={false}
                     ref='qrcode'>
                     <QRCode
@@ -54,7 +53,7 @@ export default class QRcode extends Component {
                             style={styles.button}
                             onPress={() => {
                                 Actions.note(this.props.data);
-                                }
+                            }
                             }
                         />
                     </View>
@@ -73,7 +72,7 @@ export default class QRcode extends Component {
                             style={styles.button}
                             onPress={() => {
                                 this.state.filename === '' ? Alert.alert('Enter filename', 'Filename cannot be empty') : this.snapshot('qrcode');
-                                }
+                            }
                             }
                         />
                     </View>
@@ -107,7 +106,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#4FC3F7',
     },
     button: {
-        flex: 1,
-        marginTop: 20,
+        flex: 1
     }
 });

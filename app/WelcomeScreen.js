@@ -67,15 +67,10 @@ const styles = StyleSheet.create({
   noteButton: {
     flex: 1,
     justifyContent: 'center',
-
-
   },
   cardButton: {
     flex: 1,
     justifyContent: 'center'
-  },
-  button: {
-    color: 'green'
   },
   footer: {
     flex: 2,
